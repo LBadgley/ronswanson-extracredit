@@ -14,7 +14,7 @@ class AllFacts extends PureComponent {
   }
 
   componentDidMount() {
-    this.props.fetch();
+    this.props.fetch(50);
   }
 
   render() {
@@ -30,9 +30,9 @@ const mapStateToProps = state => ({
   error: getFactsError(state)
 });
 
-const mapDispatchToProps = dispatch => ({
-  fetch() {
-    dispatch(fetchFacts());
+const mapDispatchToProps = (dispatch) => ({
+  fetch(count) {
+    dispatch(fetchFacts(count));
   }
 });
 

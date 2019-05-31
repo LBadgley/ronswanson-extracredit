@@ -1,5 +1,6 @@
 import React from 'react';
+import AllFacts from '../containers/AllFacts';
 
 export default function App() {
-  return <p>Yoooooo!</p>;
+  return <AllFacts />;
 }
